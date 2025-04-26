@@ -1,0 +1,187 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+}
+
+.credits {
+    position: absolute;
+    top: -30px;
+    right: 0;
+    font-size: 12px;
+}
+
+.credits a {
+    color: #666;
+    text-decoration: none;
+}
+
+.credits a:hover {
+    text-decoration: underline;
+}
+
+.gameboy {
+    background-color: #c0c0c0;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.screen-container {
+    background-color: #9bbc0f;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#screen {
+    background-color: #0f380f;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+    width: 320px;
+    height: 288px;
+}
+
+.controls {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.d-pad {
+    position: relative;
+    width: 120px;
+    height: 120px;
+}
+
+.d-pad-center {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: #444;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.direction {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#btn-up {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#btn-left {
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#btn-right {
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#btn-down {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.action-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-self: center;
+}
+
+.action {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #a00;
+    color: white;
+    border: none;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.menu-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.menu {
+    padding: 8px 15px;
+    background-color: #555;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.rom-loader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+#load-rom {
+    padding: 8px 15px;
+    background-color: #4a8;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+

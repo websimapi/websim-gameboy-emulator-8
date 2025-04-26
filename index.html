@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameBoy Emulator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="credits">
+            <a href="https://github.com/juchi/gameboy.js/" target="_blank">Source: github.com/juchi/gameboy.js</a>
+        </div>
+        
+        <div class="gameboy">
+            <div class="screen-container">
+                <canvas id="screen" width="160" height="144"></canvas>
+            </div>
+            
+            <div class="controls">
+                <div class="d-pad">
+                    <button id="btn-up" class="direction">↑</button>
+                    <button id="btn-left" class="direction">←</button>
+                    <button id="btn-right" class="direction">→</button>
+                    <button id="btn-down" class="direction">↓</button>
+                    <div class="d-pad-center"></div>
+                </div>
+                
+                <div class="action-buttons">
+                    <button id="btn-b" class="action">B</button>
+                    <button id="btn-a" class="action">A</button>
+                </div>
+                
+                <div class="menu-buttons">
+                    <button id="btn-select" class="menu">SELECT</button>
+                    <button id="btn-start" class="menu">START</button>
+                </div>
+            </div>
+            
+            <div class="rom-loader">
+                <input type="file" id="rom-file" accept=".gb,.gbc" />
+                <button id="load-rom">Load ROM</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="gameboy.js"></script>
+    <script src="emulator.js"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
+
